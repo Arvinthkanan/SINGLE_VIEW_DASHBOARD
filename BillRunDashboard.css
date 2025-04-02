@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-bg: #f0f2f5;
+    --dark-bg: #2c3e50;
+    --light-text: #2c3e50;
+    --dark-text: #ecf0f1;
+    --light-card: #ffffff;
+    --dark-card: #34495e;
+    --light-table-header: #3498db;
+    --dark-table-header: #1abc9c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dashboard {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.sidebar a:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.top-menu button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-menu button:hover {
+    background-color: var(--accent-color);
+}
+
+.stats-section, .table-section {
+    background-color: var(--light-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.stats-section h2, .table-section h2 {
+    margin-top: 0;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #e7f5e7;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.stat-box h3 {
+    margin: 0.5rem 0;
+}
+
+.stat-box p {
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--light-table-header);
+    color: white;
+}
+
+.highlight {
+    background-color: #f9f9f9;
+}
+
+.chart-container {
+    margin: 2rem 0;
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode .sidebar {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode .sidebar a {
+    color: var(--dark-text);
+}
+
+.dark-mode .sidebar a:hover {
+    background-color: var(--accent-color);
+}
+
+.dark-mode .main-content {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode .stats-section, .dark-mode .table-section {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+.dark-mode .stat-box {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+.dark-mode th {
+    background-color: var(--dark-table-header);
+    color: var(--dark-text);
+}
+
+.dark-mode .top-menu button {
+    background-color: var(--dark-table-header);
+}
+
+.dark-mode .top-menu button:hover {
+    background-color: var(--accent-color);
+}
